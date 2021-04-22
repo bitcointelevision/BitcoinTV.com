@@ -48,9 +48,9 @@ async function getVideosOverview (req: express.Request, res: express.Response) {
   const tags: TagOverview[] = []
 
   await Promise.all([
-    getVideosByCategory(attributes.categories, index, res, categories),
+    //getVideosByCategory(attributes.categories, index, res, categories),
     getVideosByChannel(attributes.channels, index, res, channels),
-    getVideosByTag(attributes.tags, index, res, tags)
+    //getVideosByTag(attributes.tags, index, res, tags)
   ])
 
   const result: VideosOverview = {

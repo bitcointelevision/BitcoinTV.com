@@ -48,6 +48,14 @@ $footer-links-base-opacity: .8;
   scrollbar-color: pvar(--actionButtonColor) pvar(--menuBackgroundColor);
 }
 
+.menu-channel img {
+  height: 40px;
+  margin-right: 13px;
+  margin-left: -4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 menu {
   @include ellipsis;
 

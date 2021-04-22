@@ -123,11 +123,6 @@
       <div class="on-instance">
         <div i18n class="block-title">ON {{instanceName}}</div>
 
-        <a class="menu-link" routerLink="/videos/overview" routerLinkActive="active">
-          <my-global-icon iconName="globe" aria-hidden="true"></my-global-icon>
-          <ng-container i18n>Discover</ng-container>
-        </a>
-
         <a class="menu-link" routerLink="/videos/trending" routerLinkActive="active">
           <my-global-icon iconName="trending" aria-hidden="true"></my-global-icon>
           <ng-container i18n>Trending</ng-container>
@@ -135,13 +130,39 @@
 
         <a class="menu-link" routerLink="/videos/recently-added" routerLinkActive="active">
           <my-global-icon iconName="recently-added" aria-hidden="true"></my-global-icon>
-          <ng-container i18n>Recently added</ng-container>
+          <ng-container i18n>What's New</ng-container>
         </a>
 
-        <a class="menu-link" routerLink="/videos/local" routerLinkActive="active">
-          <my-global-icon iconName="home" aria-hidden="true"></my-global-icon>
-          <ng-container i18n>Local videos</ng-container>
+      </div>
+
+      <div class="on-instance">
+        <div i18n class="block-title">FEATURED CHANNELS</div>
+
+        <a class="menu-channel" routerLink="/video-channels/citadeldispatch/videos" routerLinkActive="active">
+          <img src="/lazy-static/avatars/4eb23885-ac37-41f1-8ec6-50afd1fc1717.jpg">
+          Citadel Dispatch
         </a>
+
+        <a class="menu-channel" routerLink="/video-channels/rhr/videos" routerLinkActive="active">
+          <img src="/lazy-static/avatars/47d53747-f323-4ad5-a88b-cbbed8c9ff39.jpg">
+          Rabbit Hole Recap
+        </a>
+
+        <a class="menu-channel" routerLink="/video-channels/bitcoinmagazine/videos" routerLinkActive="active">
+          <img src="/lazy-static/avatars/02a842eb-80a6-44e5-8e88-b27fed0abc73.jpg">
+          Bitcoin Magazine
+        </a>
+
+        <a class="menu-channel" routerLink="/video-channels/bisq/videos" routerLinkActive="active">
+          <img src="/lazy-static/avatars/4a290765-7406-4037-836f-cff7449a8d3c.png">
+          Bisq Network
+        </a>
+
+        <a class="menu-channel" routerLink="/video-channels/mempool/videos" routerLinkActive="active">
+          <img src="/lazy-static/avatars/befabf19-7fb4-4bb6-b552-99e526e57cf0.png">
+          Mempool.Space
+        </a>
+
       </div>
     </div>
 
