@@ -153,6 +153,21 @@
           Bitcoin Magazine
         </a>
 
+        <a class="menu-channel" routerLink="/video-channels/btcpayserver" routerLinkctive="active">
+          <img src="/lazy-static/avatars/2652bb41-1c22-45f9-9384-b26d27d3d4b6.png">
+          BTCPayServer
+        </a>
+
+        <a class="menu-channel" routerLink="/video-channels/keep_it_simple_bitcoin" routerLinkctive="active">
+          <img src="/lazy-static/avatars/706d446d-e904-45dc-b612-2f08104a2b2c.jpg">
+          KIS Bitcoin
+        </a>
+
+        <a class="menu-channel" routerLink="/video-channels/bitcoin_opuxui" routerLinkctive="active">
+          <img src="/lazy-static/avatars/e9cb8e59-3f79-4c35-bd5d-994a21908fbc.jpg">
+          Bitcoin OP_UXUI
+        </a>
+
         <a class="menu-channel" routerLink="/video-channels/bisq" routerLinkctive="active">
           <img src="/lazy-static/avatars/4a290765-7406-4037-836f-cff7449a8d3c.png">
           Bisq
@@ -178,32 +193,12 @@
           <ng-container i18n>About</ng-container>
         </a>
       </div>
-
       <div class="footer-bottom">
 
         <div class="footer-links">
           <div *ngIf="isLoggedIn === false">
             <span role="button" (click)="openLanguageChooser()" class="c-hand" i18n>Interface: {{ currentInterfaceLanguage }}</span>
           </div>
-
-          <div>
-            <a i18n routerLink="/about/instance">Contact</a>
-            <a i18n href="https://joinpeertube.org/help" i18n-title title="Get help using PeerTube" target="_blank" rel="noopener noreferrer">Help</a>
-            <a i18n href="https://joinpeertube.org/faq" i18n-title title="Frequently asked questions about PeerTube" target="_blank" rel="noopener noreferrer">FAQ</a>
-            <a i18n routerLink="/about/instance" fragment="statistics">Stats</a>
-            <a i18n href="https://docs.joinpeertube.org/api-rest-reference.html" i18n-title title="API documentation" target="_blank" rel="noopener noreferrer">API</a>
-            <a (click)="openHotkeysCheatSheet()" class="c-hand" i18n>Keyboard shortcuts</a>
-          </div>
-        </div>
-
-        <div class="footer-copyleft">
-          <small class="d-inline" i18n-title title="powered by PeerTube - CopyLeft 2015-2021">
-            <a href="https://joinpeertube.org" class="mr-1" target="_blank" rel="noopener noreferrer" i18n>powered by PeerTube</a>
-
-            <a href="https://github.com/Chocobozzz/PeerTube/blob/develop/LICENSE" target="_blank" rel="noopener noreferrer">
-              <span aria-label="copyleft" class="d-inline-block" style="transform: rotateY(180deg)">&copy;</span> 2015-2021
-            </a>
-          </small>
         </div>
       </div>
     </div>
