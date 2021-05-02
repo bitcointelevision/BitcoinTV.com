@@ -11,6 +11,7 @@ export type BuildVideosQueryOptions = {
   serverAccountId: number
   followerActorId: number
   includeLocalVideos: boolean
+  excludeBisq: boolean
 
   count: number
   start: number
@@ -129,6 +130,10 @@ function buildListQuery (model: typeof Model, options: BuildVideosQueryOptions) 
   if (options.videoChannelId) {
     and.push('"videoChannel"."id" = :videoChannelId')
     replacements.videoChannelId = options.videoChannelId
+  }
+
+  if (options.excludeBisq) {
+    and.push('"videoChannel"."id" != 5')
   }
 
   if (options.followerActorId) {
