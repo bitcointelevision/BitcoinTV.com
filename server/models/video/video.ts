@@ -162,6 +162,7 @@ export type AvailableForListIDsOptions = {
   serverAccountId: number
   followerActorId: number
   includeLocalVideos: boolean
+  excludeBisq?: boolean
 
   attributesType?: 'none' | 'id' | 'all'
 
@@ -1085,6 +1086,7 @@ export class VideoModel extends Model {
     sort: string
     nsfw: boolean
     includeLocalVideos: boolean
+    excludeBisq?: boolean
     withFiles: boolean
     categoryOneOf?: number[]
     licenceOneOf?: number[]
@@ -1138,6 +1140,7 @@ export class VideoModel extends Model {
       videoChannelId: options.videoChannelId,
       videoPlaylistId: options.videoPlaylistId,
       includeLocalVideos: options.includeLocalVideos,
+      excludeBisq: options.excludeBisq,
       user: options.user,
       historyOfUser: options.historyOfUser,
       trendingDays,
@@ -1150,6 +1153,7 @@ export class VideoModel extends Model {
 
   static async searchAndPopulateAccountAndServer (options: {
     includeLocalVideos: boolean
+    excludeBisq?: boolean
     search?: string
     start?: number
     count?: number
@@ -1174,6 +1178,7 @@ export class VideoModel extends Model {
       followerActorId: serverActor.id,
       serverAccountId: serverActor.Account.id,
       includeLocalVideos: options.includeLocalVideos,
+      excludeBisq: options.excludeBisq,
       nsfw: options.nsfw,
       categoryOneOf: options.categoryOneOf,
       licenceOneOf: options.licenceOneOf,
@@ -1495,6 +1500,7 @@ export class VideoModel extends Model {
       sort: '-publishedAt',
       nsfw: buildNSFWFilter(),
       includeLocalVideos: true,
+      excludeBisq: true,
       withFiles: false
     })
 
@@ -1586,7 +1592,8 @@ export class VideoModel extends Model {
       count,
       serverAccountId: serverActor.Account.id,
       followerActorId,
-      includeLocalVideos: true
+      includeLocalVideos: true,
+      excludeBisq: true
     }
 
     const { query, replacements } = buildListQuery(VideoModel, queryOptions)
