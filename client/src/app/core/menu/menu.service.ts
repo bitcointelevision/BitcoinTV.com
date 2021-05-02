@@ -136,12 +136,6 @@ export class MenuService {
         label: $localize`Recently added videos`,
         shortLabel: $localize`Recently added`,
         path: '/videos/recently-added'
-      },
-      {
-        icon: 'local' as 'local',
-        label: $localize`Local videos`,
-        shortLabel: $localize`Local videos`,
-        path: '/videos/local'
       }
     ])
 
