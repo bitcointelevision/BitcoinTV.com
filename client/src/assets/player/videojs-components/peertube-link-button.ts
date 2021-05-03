@@ -23,7 +23,7 @@ class PeerTubeLinkButton extends Button {
   private buildElement () {
     const el = videojs.dom.createEl('a', {
       href: buildVideoLink(),
-      innerHTML: 'PeerTube',
+      innerHTML: 'BitcoinTV',
       title: this.player().localize('Video page (new window)'),
       className: 'vjs-peertube-link',
       target: '_blank'
